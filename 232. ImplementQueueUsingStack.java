@@ -33,9 +33,9 @@
 	Solution:
 
 	class MyQueue {
-    MyQueue first, last, next;
-    int length = 0;
-    int value;
+    		MyQueue first, last, next;
+    		int length = 0;
+    		int value;
     public MyQueue() {
         
     }
