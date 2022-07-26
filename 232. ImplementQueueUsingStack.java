@@ -32,30 +32,30 @@
 
 	Solution:
 
-	class MyQueue {
-    		MyQueue first, last, next;
-    		int length = 0;
-    		int value;
-    public MyQueue() {
+class MyQueue {
+    	MyQueue first, last, next;
+    	int length = 0;
+    	int value;
+    	public MyQueue() {
         
-    }
+    	}
     
-    public MyQueue(int value) {
-        this.value = value;
-    }
+    	public MyQueue(int value) {
+        	this.value = value;
+    	}
     
-    public void push(int x) {
-        MyQueue newQueue = new MyQueue(x);
-        if(first == null) {
-            first = last = newQueue;
-            ++length;
-        }
-        else {
-            last.next = newQueue;
-            last = newQueue;
-            ++length;
-        }
-    }
+    	public void push(int x) {
+        	MyQueue newQueue = new MyQueue(x);  	
+		if(first == null) {
+            		first = last = newQueue;
+            		++length;
+        	}
+        	else {
+            		last.next = newQueue;
+            		last = newQueue;
+            		++length;
+        	}
+    	}
     
     public int pop() {
         MyQueue holdingPointer = first;
