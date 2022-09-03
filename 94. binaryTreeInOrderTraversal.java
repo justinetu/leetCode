@@ -6,6 +6,7 @@
   Input: root = [1,null,2,3]
   Output: [1,3,2]
 */
+// FYI this solution is NOT mine this is leetCodes solution to the problem.
 
 class binaryTreeInOrderTraversal {
     public List<Integer> inorderTraversal(TreeNode root) {
