@@ -20,3 +20,5 @@ class mergeTwoSortedLists {
         return head.next;
     }
 }
+
+// FYI this solution is not mine. I got it online.
