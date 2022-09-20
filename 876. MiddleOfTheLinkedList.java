@@ -13,7 +13,13 @@
  Explanation: Since the list has two middle nodes with values 3 and 4, we return the second one.
 */
 
-//Solution
+/*
+ Solution
+ My approach is to first traverse the list to count the number of nodes then I'll traverse the list a second time AND I'll keep track
+ of each nodes index and I'll create a condition that asks if the index at the current node is equal the number of nodes in the list divided 
+ by 2, this will work for both cases of whether the list contains 1 or 2 middle numbers. Java does integer division which was useful for me in
+ solving this.
+*/
 class MiddleOfTheLinkedList {
     public ListNode middleNode(ListNode head) {
         if(head == null || head.next == null)
