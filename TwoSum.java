@@ -23,3 +23,18 @@ class TwoSum {
         return indexes;
     }
 }
+
+
+/*
+    My optimal solution
+    public int[] twoSum(int[] nums, int target) {
+        HashMap<Integer, Integer> compliment = new HashMap<>();
+        int comp;
+        for(int i = 0; i < nums.length; i++) {
+            comp = target - nums[i];
+            if(compliment.containsKey(comp))
+                return new int[]{compliment.get(comp), i};
+            compliment.put(nums[i], i);
+        }
+        return new int[]{};
+}*/
