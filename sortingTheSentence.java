@@ -15,27 +15,39 @@
   Output: "This is a sentence"
   Explanation: Sort the words in s to their original positions "This1 is2 a3 sentence4", then remove the numbers.
 */
+import java.util.ArrayList;
+import java.util.Collections;
 
 class sortingTheSentence {
     public String sortSentence(String s) {
+	// Split the string by space
         String[] words = s.split(" ");
         ArrayList<Character> list = new ArrayList<>();
-        String str = "";
+	    
+	// Exracting each number from the string and putting it in a list
         for(String word : words) {
-            str += word.charAt(word.length() - 1);
             list.add(word.charAt(word.length() - 1));
         }
+	    
+	// Created a string called concat that we'll use to append each word with a space
         String concat = "";
-		ArrayList<String> sentence = new ArrayList<>();
-		Collections.sort(list);
-		for(int i = 0; i < words.length; i++) {
-		    for(int j = 0; j < words.length; j++) {
-		        if(list.get(i) == words[j].charAt(words[j].length() - 1)) {
-		        concat+= words[j].substring(0, words[j].length() - 1) + ' ';
-		        sentence.add(words[j]);
-		    }
-		    }
+	ArrayList<String> sentence = new ArrayList<>();    
+	    
+	 // Sorting the list of numbers which are characters
+	Collections.sort(list);
+	    
+	// Here we just compare the numbers in the sorted list to the numbers in the original sentence. If the number at the given index is equal
+	// to the number in the string, then we append that word to concat. It will concatenate the strings based on the order of the numbers in list.
+	for(int i = 0; i < words.length; i++) {
+		for(int j = 0; j < words.length; j++) {
+		    if(list.get(i) == words[j].charAt(words[j].length() - 1)) {
+		    concat+= words[j].substring(0, words[j].length() - 1) + ' ';
+		    sentence.add(words[j]);
 		}
+	}
+	}
+	    
+	// We want to ignore the trailing space so we use substring to remove it
         return concat.substring(0, concat.length() - 1);
     }
 }
